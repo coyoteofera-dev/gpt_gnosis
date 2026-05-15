@@ -1,0 +1,49 @@
+EXEMPLO: COMO INSERIR UM NOVO LIVRO NO CATÁLOGO
+=================================================
+
+1. Coloque a capa do livro na pasta:
+   covers/
+
+   Exemplo:
+   covers/meu-novo-livro.jpg
+
+2. Coloque o PDF do livro na pasta:
+   pdfs/
+
+   Exemplo:
+   pdfs/meu-novo-livro.pdf
+
+3. Abra o arquivo:
+   data.js
+
+4. Dentro da lista OBRAS = [ ... ], copie e cole este modelo:
+
+{
+  "file": "meu-novo-livro.pdf",
+  "modalidade": "Coletânea",
+  "titulo": "Meu Novo Livro",
+  "autores": "Nome do Organizador 1 e Nome do Organizador 2 (organizadores)",
+  "sinopse": "Escreva aqui uma breve sinopse da obra, com duas ou três linhas.",
+  "isbn": "978-00-00000-00-0",
+  "edicao": "1ª edição digital",
+  "ano": "2026",
+  "area": "Educação",
+  "ordem": 2602,
+  "paginas": 120,
+  "pdf": "pdfs/meu-novo-livro.pdf",
+  "capa": "covers/meu-novo-livro.jpg"
+},
+
+5. Atenção à vírgula:
+   Cada obra precisa terminar com vírgula, exceto se for a última da lista.
+
+6. Para colocar essa obra nos 3 destaques da página inicial:
+   procure no final do data.js a lista DESTAQUES_INICIO e acrescente o file:
+
+const DESTAQUES_INICIO = [
+  "meu-novo-livro.pdf",
+  "outro-livro.pdf",
+  "mais-um-livro.pdf"
+];
+
+7. Salve o arquivo e envie para o GitHub.
